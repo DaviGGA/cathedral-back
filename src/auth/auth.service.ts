@@ -29,11 +29,11 @@ export class AuthService {
       throw new UnauthorizedException();
     }
 
-    const accesToken = await this.jwtService.signAsync({
+    const accessToken = await this.jwtService.signAsync({
       _id: foundAccount._id,
       email: foundAccount.email,
     });
 
-    return { accesToken };
+    return { accessToken };
   }
 }
