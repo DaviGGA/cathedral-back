@@ -51,11 +51,11 @@ describe('AuthController', () => {
 
     await accountService.createAccount(body);
 
-    const { accesToken } = await controller.signIn({
+    const { accessToken } = await controller.signIn({
       ...body, 
       password: body.password
     });
 
-    expect(accesToken).toBeTruthy();
+    expect(accessToken).toBeTruthy();
   });
 });
